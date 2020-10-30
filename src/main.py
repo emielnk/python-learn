@@ -1,3 +1,6 @@
+import Object.Animal
+import Object.Food
+
 def main() :
     times = input("Input how much time do u want to print Hello World: ")
     helloWorldForNTimes(times)
