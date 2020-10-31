@@ -1,15 +1,24 @@
-import Object.Animal
-import Object.Food
-
+import re
 def main() :
-    times = input("Input how much time do u want to print Hello World: ")
-    helloWorldForNTimes(times)
+    generateGanjilGenap()
 
-def helloWorld():
-    print("Hello World")
+def generateGanjilGenap() :
+    string1 = raw_input("Input your Plate Number: ")
+    start = False
+    lastDigit = 0
+    number = int(getDigitsOnly(string1))
+    if(number %2 == 0) :
+        print("Genap")
+    else :
+        print("Ganjil")
 
-def helloWorldForNTimes(times) :
-    for i in range(times) :
-        print("Hello World")
+def getDigitsOnly(string1) :
+    digits = ''
+    for i in range(len(string1)) :
+        if(string1[i].isdigit()) :
+            print(string1[i])
+            char = string1[i]
+            digits = digits + char
+    return digits
 
 main()
